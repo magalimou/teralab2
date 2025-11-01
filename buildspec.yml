@@ -34,7 +34,7 @@ phases:
       docker push "${REPO_URI}:latest"
       printf '[{"name":"%s","imageUri":"%s"}]\n' "${CONTAINER_NAME}" "${REPO_URI}:${IMAGE_TAG}" > imagedefinitions.json
       cat imagedefinitions.json
-
+      
 artifacts:
   files:
     - imagedefinitions.json
